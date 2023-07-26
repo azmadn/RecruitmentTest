@@ -12,4 +12,4 @@ def print_prime_numbers(start, end):
         if is_prime(number):
             print(number)
 
-print_prime_numbers(2, 100)
+print_prime_numbers(1, 100)
