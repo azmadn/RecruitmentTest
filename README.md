@@ -57,7 +57,7 @@ Tabel tidak memiliki kolom untuk menyimpan informasi tentang negara asal pelangg
 **Solusi** : Dapat ditambahkan kolom baru yaitu "COUNTRY" pada kedua tabel.
 2.  **Kurangnya Kolom Primary Key dan Penamaan Kolom** <br>
 Tabel terebut tidak memiliki kolom primary key untuk mengidentifikasi setiap baris dengan jelas sehingga dapat menyebabkan konflik dan masalah dalam query data.<br>
-**Solusi**  : Pastikan bahwa ID dalam setiap tabel unik dan tidak tumpang tindih dengan tabel lain, dan juga memberikan mana yang lebih deskriptif seperti perubahan pada kolom NAME atau ID menjadi **CUSTOMERS** dan **CUSTOMERS_ID**
+**Solusi**  : Pastikan bahwa ID dalam setiap tabel unik dan tidak tumpang tindih dengan tabel lain, dan juga memberikan nama yang lebih deskriptif seperti perubahan pada kolom NAME atau ID menjadi **CustomerName** dan **CustomerId** atau untuk penambahan **COUNTRY** menjadi **CustomerCountry** dsb.
             
 
 # Questions 3
@@ -67,7 +67,7 @@ Tabel terebut tidak memiliki kolom primary key untuk mengidentifikasi setiap bar
 
 # Question 4
 - ## **Do you have any recommendations to improve the performance?  Feel free to change the above method.**
-Untuk mengimpove performa dari metode tersebut dapat kita lakukan dengan membuat tipe data menjadi set(). 
+Untuk mengimprove performa dari metode tersebut dapat kita lakukan dengan membuat tipe data menjadi set(). 
 
 Pada kasus 1, Dimana bagA memiliki **banyak** elemen dan bagB memiliki **sedikit** elemen, performa metode intersect tersebut memiliki kompleksitas waktu yang relatif rendah. <br>
 
@@ -76,6 +76,8 @@ Sedangkan pada kasus 2, Dimana bagA memiliki **sedikit** elemen dan bagB memilik
 Maka dari itu, untuk meningkatkan performa dari fungsi intersect tesebut dapat dimodifikasi dengan mengubah bagB menjadi tipe data **set**. <br>
 
         Perubahan dapat dilihat pada 'performance.py'
+
+Mengubah bagB menjadi set dilakukan karena pada fungsi intersect dilakukan pencarian elemen dari bagA dalam bagB.
 
 # Question 5
 - ## **Please write a method to print out ALL the Prime numbers between 2 and 100.**
